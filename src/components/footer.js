@@ -3,6 +3,7 @@ import FaqSection from "@/home.js/faqs";
 import React, { useEffect, useRef } from "react";
 import Glow from "./layout/bg-glow";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const mainRef = useRef(null);
@@ -66,8 +67,11 @@ export default function Footer() {
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
           {/* Left Logo */}
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col items-center md:items-start gap-3">
             <Image width={200} height={120} src="/logo.png" alt="logo"></Image>
+            <p className="text-sm text-gray-400 max-w-xs text-center md:text-left">
+              Home of Bw Task — our CRM platform for lead and task management.
+            </p>
           </div>
 
           {/* Center Contact */}
@@ -75,19 +79,19 @@ export default function Footer() {
             <p className="text-gray-400 mb-2">Connect with us:</p>
             <div className="flex items-center justify-center gap-6 text-sm">
               <span className="hover:underline cursor-pointer">
-                +91 63589 16474
+                +91 96677 37755
               </span>
               <span className="hover:underline cursor-pointer">
-                gettasks@petpooja.com
+                support@brandingwaale.com
               </span>
             </div>
           </div>
 
           {/* Right Address */}
           <div className="text-center md:text-right text-sm text-gray-300 leading-6">
-            <p>3rd Floor, Tower-A, Gopal</p>
-            <p>Palace, Nehrunagar, Ambawadi,</p>
-            <p>Ahmedabad, Gujarat – 380015</p>
+            <p>SCF 147, Second Floor,</p>
+            <p>Huda Market, Sector 37,</p>
+            <p>Faridabad, Haryana 121003</p>
           </div>
         </div>
 
@@ -109,25 +113,27 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-white/10 mb-4"></div>
 
-        {/* Copyright */}
         {/* Footer Bottom */}
-        {/* Copyright */}
-        <p className="text-center">
-          © {new Date().getFullYear()}{" "}
-          <span className="font-medium text-gray-300">Bwtasks</span>. All rights
-          reserved.
-        </p>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-gray-300">
+          <p>© 2026 Bwtasks. All rights reserved.</p>
 
-        {/* Branding */}
-        <p className="text-center">
-          Designed & Developed by{" "}
-          <a
-            href="https://brandingwaale.com/"
-            className="font-medium text-gray-300 hover:text-white transition cursor-pointer"
-          >
-            Brandingwaale
-          </a>
-        </p>
+          <div className="flex items-center gap-6">
+            <Link
+              href="/privacy-policy"
+              className="hover:underline hover:text-white transition cursor-pointer"
+            >
+              Privacy Policy
+            </Link>
+            <a
+              href="https://www.brandingwaale.com/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline hover:text-white transition cursor-pointer"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
       </footer>
     </>
   );
