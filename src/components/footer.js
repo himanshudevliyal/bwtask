@@ -124,6 +124,14 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
+
+            <Link
+              href="/terms-of-service"
+              className="hover:underline hover:text-white transition cursor-pointer  "
+            >
+              Terms of Service
+            </Link>
+
             <a
               href="https://www.brandingwaale.com/contact"
               target="_blank"
